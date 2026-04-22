@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Derrick Tech Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px;
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 250px;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</nav>
+
+<header>
+    <h1>Welcome to Derrick Tech Hub 🚀</h1>
+    <p>I build and share technology solutions</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>I am passionate about technology, innovation and solving real-world problems.</p>
+</section>
+
+<section>
+    <h2>My Projects</h2>
+
+    <div class="card">
+        <h3>Website Builder</h3>
+        <p>Helping beginners create websites easily</p>
+    </div>
+
+    <div class="card">
+        <h3>Student System</h3>
+        <p>Smart way to manage school activities</p>
+    </div>
+
+</section>
+
+<section>
+    <h2>Tech Tips</h2>
+    <p>I share coding tips and tech knowledge</p>
+</section>
+
+<section>
+    <h2>Contact:0784197468</h2>
+    <p>Email:derrickniyigena4@email.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Derrick Tech Hub</p>
+</footer>
+
+</body>
+</html>
