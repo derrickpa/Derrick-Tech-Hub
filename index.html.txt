@@ -6,15 +6,18 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial;
+            font-family: 'Segoe UI', sans-serif;
             background: #0f172a;
             color: white;
+            scroll-behavior: smooth;
         }
 
         nav {
-            background: #020617;
+            background: rgba(2,6,23,0.9);
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
@@ -22,32 +25,71 @@
             margin: 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
         }
 
         header {
             text-align: center;
-            padding: 80px;
-            background: linear-gradient(to right, #06b6d4, #3b82f6);
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+            animation: fadeIn 2s ease-in;
         }
 
         section {
-            padding: 40px;
+            padding: 60px 20px;
             text-align: center;
+            animation: fadeUp 1.5s ease;
         }
 
         .card {
             background: #1e293b;
             padding: 20px;
             margin: 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             display: inline-block;
-            width: 250px;
+            width: 260px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: #334155;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            color: black;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0ea5e9;
         }
 
         footer {
             background: #020617;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeUp {
+            from {opacity: 0; transform: translateY(40px);}
+            to {opacity: 1; transform: translateY(0);}
         }
     </style>
 </head>
@@ -56,44 +98,48 @@
 
 <nav>
     <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <header>
-    <h1>Welcome to Derrick Tech Hub 🚀</h1>
-    <p>I build and share technology solutions</p>
+    <h1>🚀 Derrick Tech Hub</h1>
+    <p>Building innovative tech solutions for real-world problems</p>
+    <button onclick="alert('Welcome to my tech world 😎')">Explore</button>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
-    <p>I am passionate about technology, innovation and solving real-world problems.</p>
+    <p>I am a tech enthusiast passionate about innovation, coding, and solving real-life challenges using technology.</p>
 </section>
 
-<section>
+<section id="projects">
     <h2>My Projects</h2>
 
     <div class="card">
-        <h3>Website Builder</h3>
-        <p>Helping beginners create websites easily</p>
+        <h3>Study Reminder App</h3>
+        <p>Helps students manage time effectively</p>
+        <button>View</button>
     </div>
 
     <div class="card">
-        <h3>Student System</h3>
-        <p>Smart way to manage school activities</p>
+        <h3>Smart Attendance</h3>
+        <p>Automated system for tracking attendance</p>
+        <button>View</button>
     </div>
 
 </section>
 
 <section>
     <h2>Tech Tips</h2>
-    <p>I share coding tips and tech knowledge</p>
+    <p>I share useful coding and tech knowledge</p>
 </section>
 
-<section>
-    <h2>Contact:0784197468</h2>
-    <p>Email:derrickniyigena4@email.com</p>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Phone: 0784197468</p>
+    <p>Email: derrickniyigena4@email.com</p>
 </section>
 
 <footer>
