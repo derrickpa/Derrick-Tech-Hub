@@ -1,2 +1,3 @@
 # Derrick-Tech-Hub
-follow my tech to get more @inf and Guides
+follow my tech website to get more @inf and Guides tips
+
