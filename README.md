@@ -1,3 +1,2 @@
-# Derrick-Tech-Hub
-follow my tech website to get more @inf and Guides tips
-
+<title>Derrick Tech Hub | Tech Tips & Coding Guide</title>
+<meta name="description" content="Learn coding, tech tips, and innovation ideas with Derrick Tech Hub.">
