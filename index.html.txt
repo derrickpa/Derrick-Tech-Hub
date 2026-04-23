@@ -1,19 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derrick Tech Hub | Tech Tips & Innovation</title>
+    <meta name="description" content="Learn coding, tech tips, and innovation ideas with Derrick Tech Hub.">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+        }
+
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            display: inline-block;
+            width: 260px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #334155;
+        }
+
+        footer {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#tips">Tech Tips</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+    <h1>🚀 Derrick Tech Hub</h1>
+    <p>Helping students learn coding, tech skills, and innovation ideas</p>
+    <img src="https://via.placeholder.com/150" alt="Profile">
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Derrick, a tech enthusiast from Rwanda. I share coding tips, ideas, and solutions to help beginners grow in technology.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card">
+        <h3>Study Reminder App</h3>
+        <p>A system that helps students manage time effectively.</p>
+    </div>
+
+    <div class="card">
+        <h3>Smart Attendance System</h3>
+        <p>Automated system for tracking student attendance.</p>
+    </div>
+
+</section>
+
 <section id="tips">
     <h2>🔥 Tech Tips</h2>
 
     <div class="card">
-        <h3>💡 Tip 1: Use Ctrl + S</h3>
-        <p>Always save your work to avoid losing progress.</p>
+        <h3>💡 How to Learn Coding Fast</h3>
+        <p>Start with HTML, practice daily, and build small projects consistently.</p>
     </div>
 
     <div class="card">
-        <h3>💻 Tip 2: Learn HTML First</h3>
-        <p>HTML is the foundation of every website.</p>
-    </div>
-
-    <div class="card">
-        <h3>⚡ Tip 3: Practice Daily</h3>
-        <p>Consistency is the fastest way to become good in tech.</p>
+        <h3>⚡ Save Your Work</h3>
+        <p>Always use Ctrl + S to avoid losing your progress.</p>
     </div>
 
 </section>
+
+<section>
+    <h2>My Mission</h2>
+    <p>To help young people understand technology and use it to solve real-world problems.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Phone: 0784197468</p>
+    <p>Email: derrickniyigena4@email.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Derrick Tech Hub | Built by Derrick</p>
+</footer>
+
+</body>
+</html>
