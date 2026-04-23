@@ -1,150 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Derrick Tech Hub</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0f172a;
-            color: white;
-            scroll-behavior: smooth;
-        }
-
-        nav {
-            background: rgba(2,6,23,0.9);
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        header {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
-            animation: fadeIn 2s ease-in;
-        }
-
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            animation: fadeUp 1.5s ease;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            width: 260px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px) scale(1.03);
-            background: #334155;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            background: #38bdf8;
-            color: black;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #0ea5e9;
-        }
-
-        footer {
-            background: #020617;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        @keyframes fadeUp {
-            from {opacity: 0; transform: translateY(40px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-    </style>
-</head>
-
-<body>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<header>
-    <h1>🚀 Derrick Tech Hub</h1>
-    <p>Building innovative tech solutions for real-world problems</p>
-    <button onclick="alert('Welcome to my tech world 😎')">Explore</button>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a tech enthusiast passionate about innovation, coding, and solving real-life challenges using technology.</p>
-</section>
-
-<section id="projects">
-    <h2>My Projects</h2>
+<section id="tips">
+    <h2>🔥 Tech Tips</h2>
 
     <div class="card">
-        <h3>Study Reminder App</h3>
-        <p>Helps students manage time effectively</p>
-        <button>View</button>
+        <h3>💡 Tip 1: Use Ctrl + S</h3>
+        <p>Always save your work to avoid losing progress.</p>
     </div>
 
     <div class="card">
-        <h3>Smart Attendance</h3>
-        <p>Automated system for tracking attendance</p>
-        <button>View</button>
+        <h3>💻 Tip 2: Learn HTML First</h3>
+        <p>HTML is the foundation of every website.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Tip 3: Practice Daily</h3>
+        <p>Consistency is the fastest way to become good in tech.</p>
     </div>
 
 </section>
-
-<section>
-    <h2>Tech Tips</h2>
-    <p>I share useful coding and tech knowledge</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Phone: 0784197468</p>
-    <p>Email: derrickniyigena4@email.com</p>
-</section>
-
-<footer>
-    <p>© 2026 Derrick Tech Hub</p>
-</footer>
-
-</body>
-</html>
