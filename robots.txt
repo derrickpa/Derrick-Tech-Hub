@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://derrickpa.github.io/Derrick-Tech-Hub/sitemap.xml
