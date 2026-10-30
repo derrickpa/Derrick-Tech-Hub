@@ -59,18 +59,26 @@
   background:
     linear-gradient(
       90deg,
-      rgba(7,17,31,.96) 0%,
-      rgba(7,17,31,.78) 48%,
-      rgba(7,17,31,.18) 100%
+      rgba(7,17,31,.78) 0%,
+      rgba(7,17,31,.50) 48%,
+      rgba(7,17,31,.15) 100%
     ),
-    url('https://upload.wikimedia.org/wikipedia/commons/8/8b/Global_Hawk_1.jpg')
+    url('./images/global-hawk.jpg')
     center 45% / cover no-repeat;
 }
-    .hero::after {
-      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .15;
-      background-image: linear-gradient(rgba(132,177,219,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(132,177,219,.2) 1px, transparent 1px);
-      background-size: 48px 48px; mask-image: linear-gradient(to right, black, transparent 80%);
-    }
+
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background-image:
+    linear-gradient(rgba(132,177,219,.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132,177,219,.2) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to right, black, transparent 80%);
+}
     .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding-block: 82px 76px; }
     .eyebrow { display: inline-flex; gap: 10px; align-items: center; color: var(--green); font-size: .76rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 14px rgba(157,187,119,.8); }
