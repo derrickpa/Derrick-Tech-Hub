@@ -206,6 +206,7 @@
     </section>
 
     
+
 <section class="section" id="domains">
   <div class="wrap">
     <div class="section-head">
@@ -216,34 +217,48 @@
       <p>Discover the systems, technologies, and innovations shaping modern unmanned aviation.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="icon-box" aria-hidden="true">✈️</div>
-        <h3>Military Drone Types</h3>
-        <p>Explore reconnaissance UAVs, surveillance drones, combat drones, and high-altitude unmanned aircraft.</p>
-        <a class="arrow-link" href="#projects">Explore topics →</a>
+    <div class="cards drone-cards">
+
+      <article class="card drone-card">
+        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800"
+             alt="Drone flying in the sky">
+        <div class="drone-card-content">
+          <h3>Military Drone Types</h3>
+          <p>Explore reconnaissance UAVs, surveillance drones, combat drones, and high-altitude unmanned aircraft.</p>
+          <a class="arrow-link" href="#projects">Explore topics →</a>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="icon-box" aria-hidden="true">🛰️</div>
-        <h3>How Military Drones Work</h3>
-        <p>Understand UAV flight systems, navigation, communication, control, and basic operating principles.</p>
-        <a class="arrow-link" href="#projects">Explore topics →</a>
+      <article class="card drone-card">
+        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800"
+             alt="Unmanned aerial vehicle in flight">
+        <div class="drone-card-content">
+          <h3>How Military Drones Work</h3>
+          <p>Understand UAV flight systems, navigation, communication, control, and basic operating principles.</p>
+          <a class="arrow-link" href="#projects">Explore topics →</a>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="icon-box" aria-hidden="true">📡</div>
-        <h3>Drone Sensors & Components</h3>
-        <p>Learn about cameras, sensors, GPS, batteries, propulsion systems, and onboard computers.</p>
-        <a class="arrow-link" href="#projects">Explore topics →</a>
+      <article class="card drone-card">
+        <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800"
+             alt="Drone technology and camera">
+        <div class="drone-card-content">
+          <h3>Drone Sensors & Components</h3>
+          <p>Learn about cameras, sensors, GPS, batteries, propulsion systems, and onboard computers.</p>
+          <a class="arrow-link" href="#projects">Explore topics →</a>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="icon-box" aria-hidden="true">🤖</div>
-        <h3>AI & Future Drone Technology</h3>
-        <p>Discover artificial intelligence, autonomous flight, emerging UAV technologies, and their challenges.</p>
-        <a class="arrow-link" href="#projects">Explore topics →</a>
+      <article class="card drone-card">
+        <img src="https://images.unsplash.com/photo-1524143986875-3b098d78b363?w=800"
+             alt="Modern drone technology">
+        <div class="drone-card-content">
+          <h3>AI & Future Drone Technology</h3>
+          <p>Discover artificial intelligence, autonomous flight, emerging UAV technologies, and their challenges.</p>
+          <a class="arrow-link" href="#projects">Explore topics →</a>
+        </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -385,6 +400,40 @@
       Read Article →
     </a>
   </article>  
+  
+/* DRONE INTEL IMAGE CARDS */
+
+.drone-cards {
+  gap: 24px;
+}
+
+.drone-card {
+  overflow: hidden;
+  padding: 0;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.drone-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+.drone-card img {
+  width: 100%;
+  height: 210px;
+  display: block;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.drone-card:hover img {
+  transform: scale(1.06);
+}
+
+.drone-card-content {
+  padding: 22px;
+}
+
 </section>
 </body>
 </html>
