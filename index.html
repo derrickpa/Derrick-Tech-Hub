@@ -429,6 +429,52 @@
 .drone-card-content {
   padding: 22px;
 }
+/* DRONE INTEL - Responsive Topic Cards */
+
+.drone-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.drone-card {
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.drone-card > img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.drone-card-content {
+    padding: 16px;
+    flex: 1;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .drone-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 550px) {
+    .drone-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .drone-card > img {
+        height: 210px;
+    }
 
 </section>
 </body>
