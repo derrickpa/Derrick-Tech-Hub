@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Basic Components of Remote Control Systems in Military Drones | DRONE INTEL</title>
+
+  <meta name="description" content="Learn about the basic components of military drone remote control systems, including ground control stations, communication, navigation and sensors.">
+
+  <style>
+    :root {
+      --bg: #061321;
+      --panel: #0c2033;
+      --blue: #29a7ff;
+      --text: #eef6ff;
+      --muted: #a9bbce;
+      --line: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      background: #081a2b;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: var(--blue);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .58rem;
+      letter-spacing: 2px;
+    }
+
+    .back-link {
+      color: var(--blue);
+      font-size: .9rem;
+    }
+
+    /* HERO */
+    .article-hero {
+      padding: 65px 0 45px;
+      background:
+        linear-gradient(rgba(4,13,25,.82), rgba(4,13,25,.94)),
+        url('./drone-hero.png') center/cover;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(41,167,255,.14);
+      color: var(--blue);
+      border: 1px solid rgba(41,167,255,.35);
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: .72rem;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.15;
+      max-width: 850px;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: #c4d4e5;
+      max-width: 720px;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* FEATURED IMAGE */
+    .featured {
+      margin-top: 35px;
+    }
+
+    .featured img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: .8rem;
+      text-align: center;
+      margin-top: 9px;
+    }
+
+    /* ARTICLE LAYOUT */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      gap: 45px;
+      padding: 55px 0;
+      align-items: start;
+    }
+
+    .article-content h2 {
+      color: var(--blue);
+      font-size: 1.55rem;
+      margin: 38px 0 14px;
+    }
+
+    .article-content p {
+      color: #c5d3e1;
+      margin-bottom: 16px;
+    }
+
+    .article-content ul {
+      padding-left: 23px;
+      color: #c5d3e1;
+      margin-bottom: 20px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-image {
+      margin: 24px 0 30px;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+      border-radius: 13px;
+      border: 1px solid var(--line);
+    }
+
+    /* TABLE OF CONTENTS */
+    .toc {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      position: sticky;
+      top: 25px;
+    }
+
+    .toc h3 {
+      color: var(--blue);
+      margin-bottom: 15px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      font-size: .88rem;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toc a:hover {
+      color: var(--blue);
+    }
+
+    .key-terms {
+      background: var(--panel);
+      padding: 23px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      margin-top: 30px;
+    }
+
+    .key-terms h2 {
+      margin-top: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      background: #081a2b;
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    footer strong {
+      color: var(--blue);
+    }
+
+    @media(max-width: 800px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+        grid-row: 1;
+      }
+    }
+
+    @media(max-width: 550px) {
+      .article-hero {
+        padding-top: 45px;
+      }
+
+      .article-image img {
+        height: 220px;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./index.html">
+      DRONE <span>INTEL</span>
+      <small>UNDERSTAND. ANALYSE. INNOVATE.</small>
+    </a>
+
+    <a class="back-link" href="./index.html">
+      ← Back to Home
+    </a>
+  </div>
+</header>
+
+<section class="article-hero">
+  <div class="wrap">
+    <span class="tag">UAV TECHNOLOGY • BEGINNER LEVEL</span>
+
+    <h1>Basic Components of Remote Control Systems in Military Drones</h1>
+
+    <p class="subtitle">
+      Understanding the technology that connects operators with
+      unmanned aerial vehicles and supports remote supervision.
+    </p>
+
+    <div class="meta">
+      DRONE INTEL | Educational Article | 8–10 min read
+    </div>
+
+    <figure class="featured">
+      <img src="./drone-hero.png.jpg"
+           alt="Military unmanned aerial vehicle">
+      <figcaption>
+        Unmanned aerial vehicles are supported by interconnected
+        control, communication and navigation systems.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<main class="wrap article-layout">
+
+  <article class="article-content">
+
+    <section id="introduction">
+      <h2>01. Introduction</h2>
+      <p>
+        Remote control is an important part of military drone
+        technology. It allows an operator to monitor and manage an
+        unmanned aerial vehicle (UAV) from a ground-based control
+        station.
+      </p>
+      <p>
+        Communication between the drone and the operator helps
+        support flight monitoring, navigation and mission
+        coordination.
+      </p>
+    </section>
+
+    <section id="gcs">
+      <h2>02. Ground Control Station (GCS)</h2>
+
+      <figure class="article-image">
+        <img src="./drone-hero.png3.jfif"
+             alt="Military drone technology">
+        <figcaption>
+          A ground control station provides an environment for
+          monitoring and supervising a UAV.
+        </figcaption>
+      </figure>
+
+      <p>
+        The Ground Control Station is the operator's main control
+        centre. It may include computers, screens, communication
+        equipment and control interfaces used to monitor the drone.
+      </p>
+
+      <ul>
+        <li>Displays flight information.</li>
+        <li>Allows operators to monitor the aircraft.</li>
+        <li>Presents information from onboard sensors.</li>
+        <li>Supports mission planning and supervision.</li>
+      </ul>
+    </section>
+
+    <section id="communication">
+      <h2>03. Communication System</h2>
+
+      <figure class="article-image">
+        <img src="./drone-hero.png1.jpg"
+             alt="Military unmanned aircraft technology">
+        <figcaption>
+          Communication systems support information exchange
+          between the UAV and its ground station.
+        </figcaption>
+      </figure>
+
+      <p>
+        The communication system provides the connection between
+        the drone and the ground control station.
+      </p>
+      <p>
+        It supports the exchange of information, including status
+        updates, commands and sensor data. Communication may use
+        radio-frequency links or satellite communication,
+        depending on the drone system.
+      </p>
+    </section>
+
+    <section id="flight-computer">
+      <h2>04. Flight Control Computer</h2>
+
+      <figure class="article-image">
+        <img src="./drone-hero.png2.jfif"
+             alt="Unmanned aircraft technology">
+        <figcaption>
+          Electronic systems help process information and support
+          the aircraft's flight functions.
+        </figcaption>
+      </figure>
+
+      <p>
+        The flight control computer is an onboard electronic system
+        that helps manage the drone's flight.
+      </p>
+      <ul>
+        <li>Processes flight information.</li>
+        <li>Supports flight stability.</li>
+        <li>Manages information from onboard sensors.</li>
+        <li>Coordinates flight-control systems.</li>
+      </ul>
+    </section>
+
+    <section id="navigation">
+      <h2>05. Navigation System</h2>
+
+      <figure class="article-image">
+        <img src="./images/global-hawk.jpg"
+             alt="Global Hawk unmanned aircraft">
+        <figcaption>
+          Navigation technology helps unmanned aircraft determine
+          their position and movement.
+        </figcaption>
+      </figure>
+
+      <p>
+        The navigation system helps the drone determine its
+        position, direction and movement. It may use satellite
+        navigation, inertial sensors and other navigation
+        technologies.
+      </p>
+    </section>
+
+    <section id="interface">
+      <h2>06. Operator Interface</h2>
+      <p>
+        The operator interface consists of the controls and
+        displays through which the operator interacts with the
+        drone system.
+      </p>
+      <p>
+        It helps the operator understand the aircraft's status
+        and supervise its operation.
+      </p>
+    </section>
+
+    <section id="sensors">
+      <h2>07. Sensors and Cameras</h2>
+      <p>
+        Military drones may carry cameras and other sensors to
+        collect information about their surroundings.
+      </p>
+      <p>
+        The collected information can be transmitted to the
+        ground control station for observation and analysis.
+      </p>
+    </section>
+
+    <section id="power">
+      <h2>08. Power Supply</h2>
+      <p>
+        The power supply provides electrical energy to onboard
+        electronic systems, including communication equipment,
+        sensors and flight computers.
+      </p>
+    </section>
+
+    <section id="safety">
+      <h2>09. Safety and Fail-Safe Systems</h2>
+      <p>
+        Remote-control systems may include safety features
+        designed to respond to communication interruptions,
+        equipment faults or other unexpected conditions.
+      </p>
+      <p>
+        These features help reduce the risk of losing control
+        of the aircraft.
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <h2>10. Conclusion</h2>
+      <p>
+        Remote control of military drones depends on several
+        interconnected components. The ground control station,
+        communication system, flight control computer, navigation
+        system, sensors and safety features work together to
+        support remote supervision of unmanned aircraft.
+      </p>
+      <p>
+        Understanding these basic components provides a
+        foundation for studying modern UAV technology and
+        its applications.
+      </p>
+    </section>
+
+    <section class="key-terms" id="key-terms">
+      <h2>Key Terms</h2>
+      <ul>
+        <li><strong>UAV:</strong> Unmanned Aerial Vehicle.</li>
+        <li><strong>GCS:</strong> Ground Control Station.</li>
+        <li><strong>Communication link:</strong> A connection used to exchange information.</li>
+        <li><strong>Navigation:</strong> Determining position and direction.</li>
+        <li><strong>Fail-safe:</strong> A feature designed to reduce risk when something goes wrong.</li>
+      </ul>
+    </section>
+
+  </article>
+
+  <aside class="toc">
+    <h3>IN THIS ARTICLE</h3>
+    <a href="#introduction">01. Introduction</a>
+    <a href="#gcs">02. Ground Control Station</a>
+    <a href="#communication">03. Communication System</a>
+    <a href="#flight-computer">04. Flight Control Computer</a>
+    <a href="#navigation">05. Navigation System</a>
+    <a href="#interface">06. Operator Interface</a>
+    <a href="#sensors">07. Sensors and Cameras</a>
+    <a href="#power">08. Power Supply</a>
+    <a href="#safety">09. Safety Systems</a>
+    <a href="#conclusion">10. Conclusion</a>
+    <a href="#key-terms">Key Terms</a>
+  </aside>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>DRONE INTEL</strong>
+    <p>UNDERSTAND. ANALYSE. INNOVATE.</p>
+    <p>© 2026 DRONE INTEL. Educational content.</p>
+  </div>
+</footer>
+
+</body>
+</html>
