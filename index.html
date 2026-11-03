@@ -10,7 +10,50 @@
 <meta name="description" content="Explore military drone technology, UAV systems, reconnaissance, surveillance, drone components, artificial intelligence, and the future of unmanned military aviation.">
   
   <style>
+/* DRONE INTEL - Footer Styling */
+.footer {
+    padding: 28px 20px;
+    background: #071629;
+    color: #c5d3e2;
+    border-top: 2px solid #168de2;
+}
 
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.footer-brand p {
+    margin: 6px 0 0;
+    color: #53b8ff;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-info {
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+}
     :root {
       --bg: #07111f; --panel: #0b192a; --panel2: #102238;
       --text: #edf5ff; --muted: #a7b8cb; --blue: #29a7ff;
