@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter-Drone Defence Systems (C-UAS) | DRONE INTEL</title>
+  <meta name="description" content="Explore how Counter-Unmanned Aircraft Systems detect, track and defend against unauthorized drones.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #071629;
+      color: #e8f0f8;
+      line-height: 1.7;
+    }
+    header {
+      min-height: 320px;
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(#071629bb, #071629ee),
+        url("./topic background.jfif") center/cover;
+    }
+    header h1 { font-size: clamp(30px, 5vw, 48px); }
+    header p { color: #53b8ff; }
+    main { max-width: 1000px; margin: auto; padding: 30px 20px; }
+    section { margin: 45px 0; }
+    h2 { color: #53b8ff; }
+    .article-image {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 15px 0;
+    }
+    .intro {
+      font-size: 18px;
+      color: #c5d3e2;
+    }
+    .back-link { color: #53b8ff; text-decoration: none; }
+    footer {
+      padding: 25px;
+      text-align: center;
+      border-top: 1px solid #24415e;
+      color: #aabbd0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <p>DRONE INTEL · MILITARY TECHNOLOGY</p>
+  <h1>Counter-Drone Defence Systems (C-UAS)</h1>
+  <p>Understanding the technologies designed to detect and defend against unauthorized drones.</p>
+</header>
+
+<main>
+  <a class="back-link" href="./index.html">← Back to Home</a>
+
+  <section>
+    <h2>1. Introduction to Counter-UAS Technology</h2>
+    <p class="intro">
+      Unmanned Aircraft Systems (UAS) have become increasingly important
+      in modern aviation and military operations. However, unauthorized
+      or hostile drones can create security challenges for military bases,
+      airports and other protected locations.
+    </p>
+    <p>
+      Counter-Unmanned Aircraft Systems (C-UAS) are technologies and
+      procedures designed to detect, identify, track and respond to
+      unauthorized drones.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. What Is a Counter-Drone Defence System?</h2>
+    <p>
+      A Counter-Drone Defence System is a combination of sensors,
+      monitoring equipment, software and response capabilities used
+      to manage potential drone threats.
+    </p>
+    <p>
+      Its main functions include detection, identification, tracking,
+      assessment and an appropriate response.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Drone Detection Technologies</h2>
+    <p>
+      Detection is the first stage of counter-drone defence. Different
+      technologies can help security teams recognize the presence of
+      an unauthorized aircraft.
+    </p>
+    <p>
+      These may include radar, radio-frequency monitoring, cameras
+      and acoustic sensors. Each technology has strengths and limitations.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Radar and Radio-Frequency Detection</h2>
+    <p>
+      Radar systems use radio waves to detect objects and estimate
+      their position and movement. Radio-frequency monitoring can
+      identify signals associated with some remotely controlled drones.
+    </p>
+    <p>
+      Combining these technologies can provide useful information,
+      although not every drone emits detectable radio signals.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Electro-Optical and Infrared Sensors</h2>
+    <p>
+      Electro-optical cameras capture visible images, while infrared
+      sensors detect heat patterns. These tools can help operators
+      observe and assess objects detected by other sensors.
+    </p>
+    <p>
+      Their performance may be affected by weather, visibility,
+      distance and environmental conditions.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Drone Identification and Tracking</h2>
+    <p>
+      After detection, a system may analyze available information
+      to distinguish a drone from birds, aircraft or other objects.
+      Tracking helps monitoring teams understand its movement over time.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Types of Counter-Drone Defence Systems</h2>
+
+    <h3>7.1 Electronic Countermeasure Systems</h3>
+    <img class="article-image" src="./counter measures system.jfif" alt="Electronic countermeasure system">
+    <p>
+      Electronic countermeasure systems are designed to address
+      communication or navigation-related aspects of certain drone
+      threats. Their use is subject to legal restrictions and operational
+      safety requirements.
+    </p>
+
+    <h3>7.2 Kinetic Interception Systems</h3>
+    <img class="article-image" src="./intercepter system.jfif" alt="Drone interception system">
+    <p>
+      Kinetic interception systems use physical interception methods
+      to stop a drone. These systems require careful safety assessment
+      because falling objects can create risks to people and property.
+    </p>
+
+    <h3>7.3 Directed-Energy Systems</h3>
+    <img class="article-image" src="./Energy system.jfif" alt="Directed-energy defence system">
+    <p>
+      Directed-energy systems use concentrated energy, such as
+      high-energy lasers, as a potential counter-drone response.
+      Their effectiveness depends on environmental and technical factors.
+    </p>
+
+    <h3>7.4 Net-Based Capture Systems</h3>
+    <img class="article-image" src="./capture net system.jfif" alt="Net-based drone capture system">
+    <p>
+      Net-based systems aim to capture or restrain a drone physically.
+      Some approaches use specialized interceptor platforms, while
+      others use stationary capture equipment.
+    </p>
+
+    <h3>7.5 Detection and Tracking Systems</h3>
+    <img class="article-image" src="./tracking system.jpg" alt="Drone detection and tracking equipment">
+    <p>
+      Detection and tracking systems combine sensors and monitoring
+      tools to help security teams locate and follow possible drone threats.
+    </p>
+
+    <h3>7.6 Integrated Counter-UAS Systems</h3>
+    <img class="article-image" src="./counter drone system.webp" alt="Integrated counter-drone defence system">
+    <p>
+      Integrated systems combine several capabilities, such as radar,
+      cameras, identification software and response options, into
+      a coordinated security framework.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Integration with Military Air Defence</h2>
+    <p>
+      Counter-UAS technology can complement wider air-defence and
+      security systems. Integration helps personnel share information,
+      assess possible threats and coordinate appropriate responses.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Challenges and Limitations</h2>
+    <ul>
+      <li>Small drones can be difficult to detect.</li>
+      <li>Buildings and terrain may interfere with sensors.</li>
+      <li>Weather can reduce camera and radar performance.</li>
+      <li>Electronic interference may affect detection systems.</li>
+      <li>Cost, training and legal restrictions affect deployment.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>10. Future Developments in Counter-UAS Technology</h2>
+    <p>
+      Future systems may use improved artificial intelligence,
+      sensor integration and automated analysis to support faster
+      identification and more reliable decision-making.
+    </p>
+    <p>
+      Human oversight, safety and responsible use will remain essential.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Conclusion</h2>
+    <p>
+      Counter-Drone Defence Systems are becoming an important part
+      of modern security and air-defence discussions. Understanding
+      their technologies, capabilities and limitations helps learners
+      appreciate the changing relationship between drones and defence.
+    </p>
+    <p>
+      Effective counter-drone protection depends not on one technology
+      alone, but on informed decisions, coordinated systems and responsible use.
+    </p>
+  </section>
+
+  <a class="back-link" href="./index.html">← Return to DRONE INTEL</a>
+</main>
+
+<footer>
+  DRONE INTEL · UNDERSTAND. ANALYSE. INNOVATE.
+  <br>© <span id="year"></span> DRONE INTEL
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
