@@ -2,246 +2,784 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter-Drone Defence Systems (C-UAS) | DRONE INTEL</title>
-  <meta name="description" content="Explore how Counter-Unmanned Aircraft Systems detect, track and defend against unauthorized drones.">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #071629;
-      color: #e8f0f8;
-      line-height: 1.7;
-    }
-    header {
-      min-height: 320px;
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(#071629bb, #071629ee),
-        url("./topic background.jfif") center/cover;
-    }
-    header h1 { font-size: clamp(30px, 5vw, 48px); }
-    header p { color: #53b8ff; }
-    main { max-width: 1000px; margin: auto; padding: 30px 20px; }
-    section { margin: 45px 0; }
-    h2 { color: #53b8ff; }
-    .article-image {
-      width: 100%;
-      max-height: 420px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin: 15px 0;
-    }
-    .intro {
-      font-size: 18px;
-      color: #c5d3e2;
-    }
-    .back-link { color: #53b8ff; text-decoration: none; }
-    footer {
-      padding: 25px;
-      text-align: center;
-      border-top: 1px solid #24415e;
-      color: #aabbd0;
-    }
-  </style>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<header>
-  <p>DRONE INTEL · MILITARY TECHNOLOGY</p>
-  <h1>Counter-Drone Defence Systems (C-UAS)</h1>
-  <p>Understanding the technologies designed to detect and defend against unauthorized drones.</p>
+<title>Counter-Drone Defence Systems | DRONE INTEL</title>
+<meta name="description" content="Explore counter-unmanned aircraft systems, drone detection, tracking and modern air defence technology.">
+
+<style>
+:root {
+  --bg: #06111f;
+  --panel: #0c1d30;
+  --panel2: #10263d;
+  --blue: #168de2;
+  --cyan: #54c5ff;
+  --white: #f1f6fc;
+  --muted: #a6b8ca;
+  --line: #203951;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6,17,31,.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+  max-width: 1250px;
+  margin: auto;
+  padding: 17px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--cyan);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--cyan);
+}
+
+/* HERO */
+.hero {
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(3,13,25,.97), rgba(3,13,25,.48)),
+    url("./topic%20background.jfif") center/cover no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1250px;
+  padding: 75px 24px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-size: clamp(36px, 6vw, 65px);
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #c5d3e2;
+  max-width: 650px;
+  font-size: 17px;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 7px 14px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  color: var(--cyan);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* PAGE LAYOUT */
+.page-layout {
+  max-width: 1250px;
+  margin: 55px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 35px;
+  align-items: start;
+}
+
+.article {
+  min-width: 0;
+}
+
+.sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.panel h3 {
+  color: var(--cyan);
+  font-size: 14px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.article-section {
+  scroll-margin-top: 100px;
+  margin-bottom: 35px;
+  padding: 30px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.section-number {
+  color: var(--cyan);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.article-section h2 {
+  font-size: 25px;
+  margin: 8px 0 17px;
+  line-height: 1.3;
+}
+
+.article-section h3 {
+  font-size: 19px;
+  margin: 28px 0 10px;
+  color: var(--cyan);
+}
+
+.article-section p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.article-section ul {
+  color: var(--muted);
+  padding-left: 22px;
+}
+
+.article-section li {
+  margin: 9px 0;
+}
+
+/* IMAGES */
+.article-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 9px;
+  margin: 18px 0;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+}
+
+.image-caption {
+  color: #829ab1;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+/* SIX SYSTEM CARDS */
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.system-card {
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s;
+}
+
+.system-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue);
+}
+
+.system-card img {
+  width: 100%;
+  height: 190px;
+  display: block;
+  object-fit: cover;
+  background: var(--panel);
+}
+
+.system-card-content {
+  padding: 18px;
+}
+
+.system-card h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: var(--white);
+}
+
+.system-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.system-label {
+  color: var(--cyan);
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* TABLE OF CONTENTS */
+.toc {
+  list-style: none;
+  padding: 0;
+}
+
+.toc li {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.toc a {
+  display: block;
+  padding: 9px 0;
+  color: var(--muted);
+  font-size: 13px;
+  transition: color .2s;
+}
+
+.toc a:hover {
+  color: var(--cyan);
+}
+
+.quick-facts p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 9px 0;
+}
+
+.quick-facts strong {
+  color: var(--white);
+}
+
+/* CALLOUT */
+.callout {
+  border-left: 3px solid var(--blue);
+  background: #10263d;
+  padding: 18px;
+  margin: 20px 0;
+  color: #c5d3e2;
+  border-radius: 0 8px 8px 0;
+}
+
+.back-top {
+  display: inline-block;
+  color: var(--cyan);
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 35px 24px;
+  background: #040c16;
+}
+
+.footer-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media(max-width: 850px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+}
+
+@media(max-width: 600px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    min-height: 390px;
+  }
+
+  .hero-content {
+    padding: 55px 20px;
+  }
+
+  .page-layout {
+    margin: 30px auto;
+    padding: 0 14px;
+    gap: 20px;
+  }
+
+  .article-section {
+    padding: 21px;
+  }
+
+  .article-section h2 {
+    font-size: 21px;
+  }
+
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-image {
+    height: 220px;
+  }
+
+  .system-card img {
+    height: 210px;
+  }
+}
+</style>
+</head>
+
+<body id="top">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">DRONE <span>INTEL</span></a>
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./index.html#domains">Technology</a>
+      <a href="./index.html#about">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">MILITARY TECHNOLOGY · FEATURED RESEARCH</div>
+    <h1>COUNTER-DRONE DEFENCE SYSTEMS</h1>
+    <p>
+      Understanding the technologies designed to detect, identify
+      and respond to unauthorized unmanned aircraft.
+    </p>
+    <span class="hero-tag">C-UAS TECHNOLOGY</span>
+  </div>
 </header>
 
-<main>
-  <a class="back-link" href="./index.html">← Back to Home</a>
+<div class="page-layout">
 
-  <section>
-    <h2>1. Introduction to Counter-UAS Technology</h2>
-    <p class="intro">
-      Unmanned Aircraft Systems (UAS) have become increasingly important
-      in modern aviation and military operations. However, unauthorized
-      or hostile drones can create security challenges for military bases,
-      airports and other protected locations.
-    </p>
-    <p>
-      Counter-Unmanned Aircraft Systems (C-UAS) are technologies and
-      procedures designed to detect, identify, track and respond to
-      unauthorized drones.
-    </p>
-  </section>
+<main class="article">
 
-  <section>
-    <h2>2. What Is a Counter-Drone Defence System?</h2>
-    <p>
-      A Counter-Drone Defence System is a combination of sensors,
-      monitoring equipment, software and response capabilities used
-      to manage potential drone threats.
-    </p>
-    <p>
-      Its main functions include detection, identification, tracking,
-      assessment and an appropriate response.
-    </p>
-  </section>
+<section class="article-section" id="introduction">
+  <div class="section-number">01 / OVERVIEW</div>
+  <h2>Introduction to Counter-UAS Technology</h2>
+  <p>
+    Unmanned Aircraft Systems (UAS) have become increasingly
+    important in modern aviation, security and military operations.
+    Their growing use also creates new challenges for the protection
+    of sensitive locations and controlled airspace.
+  </p>
+  <p>
+    Counter-Unmanned Aircraft Systems (C-UAS) bring together
+    technologies and procedures designed to detect, identify,
+    track and manage unauthorized drone activity.
+  </p>
+  <div class="callout">
+    <strong>Key idea:</strong> Counter-drone defence is not one device.
+    It is a coordinated approach involving sensors, information,
+    trained personnel and appropriate response procedures.
+  </div>
+</section>
 
-  <section>
-    <h2>3. Drone Detection Technologies</h2>
-    <p>
-      Detection is the first stage of counter-drone defence. Different
-      technologies can help security teams recognize the presence of
-      an unauthorized aircraft.
-    </p>
-    <p>
-      These may include radar, radio-frequency monitoring, cameras
-      and acoustic sensors. Each technology has strengths and limitations.
-    </p>
-  </section>
+<section class="article-section" id="definition">
+  <div class="section-number">02 / FUNDAMENTALS</div>
+  <h2>What Is a Counter-Drone Defence System?</h2>
+  <p>
+    A Counter-Drone Defence System is a collection of equipment,
+    software and procedures used to manage potential threats
+    involving unauthorized unmanned aircraft.
+  </p>
+  <p>Its main functions include:</p>
+  <ul>
+    <li>Detecting the presence of a possible drone.</li>
+    <li>Identifying and assessing the object.</li>
+    <li>Monitoring its movement.</li>
+    <li>Supporting an appropriate and lawful response.</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>4. Radar and Radio-Frequency Detection</h2>
-    <p>
-      Radar systems use radio waves to detect objects and estimate
-      their position and movement. Radio-frequency monitoring can
-      identify signals associated with some remotely controlled drones.
-    </p>
-    <p>
-      Combining these technologies can provide useful information,
-      although not every drone emits detectable radio signals.
-    </p>
-  </section>
+<section class="article-section" id="detection">
+  <div class="section-number">03 / SENSOR TECHNOLOGY</div>
+  <h2>Drone Detection Technologies</h2>
+  <p>
+    Detection is an important first stage of counter-drone security.
+    Different sensors provide different types of information.
+  </p>
+  <p>
+    Radar, radio-frequency monitoring, electro-optical cameras,
+    infrared sensors and acoustic systems may all contribute
+    to detecting possible drone activity.
+  </p>
+</section>
 
-  <section>
-    <h2>5. Electro-Optical and Infrared Sensors</h2>
-    <p>
-      Electro-optical cameras capture visible images, while infrared
-      sensors detect heat patterns. These tools can help operators
-      observe and assess objects detected by other sensors.
-    </p>
-    <p>
-      Their performance may be affected by weather, visibility,
-      distance and environmental conditions.
-    </p>
-  </section>
+<section class="article-section" id="radar">
+  <div class="section-number">04 / RADAR & SIGNALS</div>
+  <h2>Radar and Radio-Frequency Detection</h2>
+  <p>
+    Radar uses radio waves to detect objects and estimate their
+    position and movement. It can provide useful information
+    about objects within a monitored area.
+  </p>
+  <p>
+    Radio-frequency monitoring can identify certain signals
+    associated with remotely controlled aircraft. However,
+    not every drone communicates in a way that can be detected
+    through radio-frequency monitoring.
+  </p>
+</section>
 
-  <section>
-    <h2>6. Drone Identification and Tracking</h2>
-    <p>
-      After detection, a system may analyze available information
-      to distinguish a drone from birds, aircraft or other objects.
-      Tracking helps monitoring teams understand its movement over time.
-    </p>
-  </section>
+<section class="article-section" id="sensors">
+  <div class="section-number">05 / VISUAL MONITORING</div>
+  <h2>Electro-Optical and Infrared Sensors</h2>
+  <p>
+    Electro-optical cameras capture visible images, while infrared
+    sensors detect differences in thermal radiation. These
+    technologies can help personnel observe and assess objects.
+  </p>
+  <p>
+    Weather, visibility, distance and environmental conditions
+    can affect sensor performance.
+  </p>
+</section>
 
-  <section>
-    <h2>7. Types of Counter-Drone Defence Systems</h2>
+<section class="article-section" id="tracking">
+  <div class="section-number">06 / INFORMATION & ANALYSIS</div>
+  <h2>Drone Identification and Tracking</h2>
+  <p>
+    Detection alone does not always establish what an object is.
+    Identification involves assessing available information
+    to distinguish possible drones from birds, aircraft
+    and other objects.
+  </p>
+  <p>
+    Tracking helps monitoring teams understand movement over time
+    and maintain awareness of the surrounding airspace.
+  </p>
+</section>
 
-    <h3>7.1 Electronic Countermeasure Systems</h3>
-    <img class="article-image" src="./counter measures system.jfif" alt="Electronic countermeasure system">
-    <p>
-      Electronic countermeasure systems are designed to address
-      communication or navigation-related aspects of certain drone
-      threats. Their use is subject to legal restrictions and operational
-      safety requirements.
-    </p>
+<section class="article-section" id="systems">
+  <div class="section-number">07 / DEFENCE TECHNOLOGY</div>
+  <h2>Types of Counter-Drone Defence Systems</h2>
+  <p>
+    Counter-UAS solutions can use different approaches.
+    Each has its own capabilities, limitations, safety requirements
+    and legal considerations.
+  </p>
 
-    <h3>7.2 Kinetic Interception Systems</h3>
-    <img class="article-image" src="./intercepter system.jfif" alt="Drone interception system">
-    <p>
-      Kinetic interception systems use physical interception methods
-      to stop a drone. These systems require careful safety assessment
-      because falling objects can create risks to people and property.
-    </p>
+  <div class="system-grid">
 
-    <h3>7.3 Directed-Energy Systems</h3>
-    <img class="article-image" src="./Energy system.jfif" alt="Directed-energy defence system">
-    <p>
-      Directed-energy systems use concentrated energy, such as
-      high-energy lasers, as a potential counter-drone response.
-      Their effectiveness depends on environmental and technical factors.
-    </p>
+    <article class="system-card">
+      <img src="./counter%20measures%20system.jfif"
+           alt="Electronic countermeasure system"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 01</span>
+        <h3>Electronic Countermeasures</h3>
+        <p>
+          Technologies that address certain communication
+          or navigation-related aspects of drone threats.
+          Their use is subject to strict legal and safety restrictions.
+        </p>
+      </div>
+    </article>
 
-    <h3>7.4 Net-Based Capture Systems</h3>
-    <img class="article-image" src="./capture net system.jfif" alt="Net-based drone capture system">
-    <p>
-      Net-based systems aim to capture or restrain a drone physically.
-      Some approaches use specialized interceptor platforms, while
-      others use stationary capture equipment.
-    </p>
+    <article class="system-card">
+      <img src="./intercepter%20system.jfif"
+           alt="Kinetic drone interception system"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 02</span>
+        <h3>Kinetic Interception</h3>
+        <p>
+          Physical interception approaches intended to stop
+          an unauthorized aircraft. Falling debris and
+          public safety are important considerations.
+        </p>
+      </div>
+    </article>
 
-    <h3>7.5 Detection and Tracking Systems</h3>
-    <img class="article-image" src="./tracking system.jpg" alt="Drone detection and tracking equipment">
-    <p>
-      Detection and tracking systems combine sensors and monitoring
-      tools to help security teams locate and follow possible drone threats.
-    </p>
+    <article class="system-card">
+      <img src="./Energy%20system.jfif"
+           alt="Directed energy defence system"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 03</span>
+        <h3>Directed-Energy Systems</h3>
+        <p>
+          Systems using concentrated energy, such as lasers,
+          as a potential defence option. Their performance
+          depends on environmental and technical conditions.
+        </p>
+      </div>
+    </article>
 
-    <h3>7.6 Integrated Counter-UAS Systems</h3>
-    <img class="article-image" src="./counter drone system.webp" alt="Integrated counter-drone defence system">
-    <p>
-      Integrated systems combine several capabilities, such as radar,
-      cameras, identification software and response options, into
-      a coordinated security framework.
-    </p>
-  </section>
+    <article class="system-card">
+      <img src="./capture%20net%20system.jfif"
+           alt="Net-based drone capture system"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 04</span>
+        <h3>Net-Based Capture</h3>
+        <p>
+          Physical capture approaches designed to restrain
+          an unauthorized drone. Some systems use specialized
+          capture equipment or interceptor platforms.
+        </p>
+      </div>
+    </article>
 
-  <section>
-    <h2>8. Integration with Military Air Defence</h2>
-    <p>
-      Counter-UAS technology can complement wider air-defence and
-      security systems. Integration helps personnel share information,
-      assess possible threats and coordinate appropriate responses.
-    </p>
-  </section>
+    <article class="system-card">
+      <img src="./tracking%20system.jpg"
+           alt="Drone detection and tracking equipment"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 05</span>
+        <h3>Detection and Tracking</h3>
+        <p>
+          Sensor and monitoring technologies that help
+          security teams observe, identify and follow
+          possible drone activity.
+        </p>
+      </div>
+    </article>
 
-  <section>
-    <h2>9. Challenges and Limitations</h2>
-    <ul>
-      <li>Small drones can be difficult to detect.</li>
-      <li>Buildings and terrain may interfere with sensors.</li>
-      <li>Weather can reduce camera and radar performance.</li>
-      <li>Electronic interference may affect detection systems.</li>
-      <li>Cost, training and legal restrictions affect deployment.</li>
-    </ul>
-  </section>
+    <article class="system-card">
+      <img src="./counter%20drone%20system.webp"
+           alt="Integrated counter-UAS defence system"
+           loading="lazy">
+      <div class="system-card-content">
+        <span class="system-label">TYPE 06</span>
+        <h3>Integrated C-UAS Systems</h3>
+        <p>
+          Coordinated systems combining sensors, monitoring,
+          information analysis and appropriate response
+          capabilities into one security framework.
+        </p>
+      </div>
+    </article>
 
-  <section>
-    <h2>10. Future Developments in Counter-UAS Technology</h2>
-    <p>
-      Future systems may use improved artificial intelligence,
-      sensor integration and automated analysis to support faster
-      identification and more reliable decision-making.
-    </p>
-    <p>
-      Human oversight, safety and responsible use will remain essential.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>11. Conclusion</h2>
-    <p>
-      Counter-Drone Defence Systems are becoming an important part
-      of modern security and air-defence discussions. Understanding
-      their technologies, capabilities and limitations helps learners
-      appreciate the changing relationship between drones and defence.
-    </p>
-    <p>
-      Effective counter-drone protection depends not on one technology
-      alone, but on informed decisions, coordinated systems and responsible use.
-    </p>
-  </section>
+<section class="article-section" id="integration">
+  <div class="section-number">08 / DEFENCE NETWORKS</div>
+  <h2>Integration with Military Air Defence</h2>
+  <p>
+    Counter-UAS technology can complement wider air-defence
+    and security arrangements. Integration allows information
+    from different monitoring systems to support a shared
+    understanding of potential airspace threats.
+  </p>
+  <p>
+    Personnel, communication systems and established procedures
+    remain essential to coordinated decision-making.
+  </p>
+</section>
 
-  <a class="back-link" href="./index.html">← Return to DRONE INTEL</a>
+<section class="article-section" id="challenges">
+  <div class="section-number">09 / OPERATIONAL REALITIES</div>
+  <h2>Challenges and Limitations</h2>
+  <ul>
+    <li>Small objects can be difficult to distinguish from background clutter.</li>
+    <li>Buildings and terrain can affect sensor coverage.</li>
+    <li>Weather may reduce camera and sensor performance.</li>
+    <li>Different drone designs create different detection challenges.</li>
+    <li>Cost, training and maintenance influence system availability.</li>
+    <li>Legal requirements and public safety limit response options.</li>
+  </ul>
+</section>
+
+<section class="article-section" id="future">
+  <div class="section-number">10 / EMERGING TECHNOLOGY</div>
+  <h2>Future Developments in Counter-UAS Technology</h2>
+  <p>
+    Future counter-drone systems may benefit from improved
+    artificial intelligence, better sensor integration
+    and more advanced information analysis.
+  </p>
+  <p>
+    These developments could support more accurate identification
+    and better-informed decisions. Human oversight, accountability
+    and responsible use will remain important.
+  </p>
+</section>
+
+<section class="article-section" id="conclusion">
+  <div class="section-number">11 / KEY TAKEAWAYS</div>
+  <h2>Conclusion</h2>
+  <p>
+    Counter-Drone Defence Systems are becoming an important
+    subject in modern aviation, security and military technology.
+    They combine detection, identification, tracking and
+    response capabilities.
+  </p>
+  <p>
+    Understanding their strengths and limitations helps explain
+    why effective protection depends on coordinated technology,
+    trained personnel, sound judgement and responsible use.
+  </p>
+  <div class="callout">
+    <strong>Remember:</strong> No single counter-drone technology
+    solves every security challenge. Different situations require
+    careful assessment and appropriate safeguards.
+  </div>
+  <a class="back-top" href="#top">↑ Back to top</a>
+</section>
+
+<section class="article-section" id="glossary">
+  <div class="section-number">REFERENCE / KEY TERMS</div>
+  <h2>Important Terminology</h2>
+  <ul>
+    <li><strong>UAS:</strong> Unmanned Aircraft System.</li>
+    <li><strong>C-UAS:</strong> Counter-Unmanned Aircraft System.</li>
+    <li><strong>Radar:</strong> Radio-based object detection technology.</li>
+    <li><strong>EO:</strong> Electro-Optical sensing.</li>
+    <li><strong>IR:</strong> Infrared sensing.</li>
+    <li><strong>Detection:</strong> Recognizing the presence of an object.</li>
+    <li><strong>Tracking:</strong> Monitoring an object's movement over time.</li>
+  </ul>
+</section>
+
 </main>
 
-<footer>
-  DRONE INTEL · UNDERSTAND. ANALYSE. INNOVATE.
-  <br>© <span id="year"></span> DRONE INTEL
+<aside class="sidebar">
+
+  <div class="panel">
+    <h3>ARTICLE CONTENTS</h3>
+    <ul class="toc">
+      <li><a href="#introduction">01. Introduction</a></li>
+      <li><a href="#definition">02. What is C-UAS?</a></li>
+      <li><a href="#detection">03. Detection Technologies</a></li>
+      <li><a href="#radar">04. Radar & RF Detection</a></li>
+      <li><a href="#sensors">05. EO & Infrared Sensors</a></li>
+      <li><a href="#tracking">06. Identification & Tracking</a></li>
+      <li><a href="#systems">07. Defence System Types</a></li>
+      <li><a href="#integration">08. Air Defence Integration</a></li>
+      <li><a href="#challenges">09. Challenges</a></li>
+      <li><a href="#future">10. Future Developments</a></li>
+      <li><a href="#conclusion">11. Conclusion</a></li>
+      <li><a href="#glossary">Key Terminology</a></li>
+    </ul>
+  </div>
+
+  <div class="panel quick-facts">
+    <h3>ARTICLE DETAILS</h3>
+    <p><strong>Category:</strong> Military Technology</p>
+    <p><strong>Topic:</strong> Counter-UAS</p>
+    <p><strong>Focus:</strong> Detection & Defence</p>
+    <p><strong>Level:</strong> Educational Overview</p>
+  </div>
+
+  <div class="panel">
+    <h3>EXPLORE MORE</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:15px">
+      Discover more military technology topics at DRONE INTEL.
+    </p>
+    <a class="back-top" href="./index.html">← Visit Homepage</a>
+  </div>
+
+</aside>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo">DRONE <span>INTEL</span></div>
+      <p>UNDERSTAND. ANALYSE. INNOVATE.</p>
+    </div>
+    <div>
+      <p>Military Technology · Education · Responsible Innovation</p>
+      <p>© <span id="year"></span> DRONE INTEL. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
 </html>
