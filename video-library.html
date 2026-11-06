@@ -1,17 +1,125 @@
-<section id="video-library">
-  <h2>DRONE INTEL VIDEO LIBRARY</h2>
-  <p>Explore educational videos about military drone technology.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="video-card">
-    <h3>Drone Kamikazi</h3>
+  <title>Video Library | DRONE INTEL</title>
 
-    <iframe
-      src="https://www.youtube.com/embed/VXY1ZY8GxFg"
-      title="Drone Kamikazi"
-      width="100%"
-      height="500"
-      style="border:0; max-width:360px;"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #071426;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 25px 8%;
+      background: #0c1e35;
+      border-bottom: 1px solid #174b78;
+    }
+
+    header h1 {
+      color: #38aaff;
+      margin: 0;
+    }
+
+    header p {
+      color: #b9cce0;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      color: #38aaff;
+      font-size: 30px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .video-card {
+      background: #10243d;
+      border: 1px solid #1d4569;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .video-card h3 {
+      color: #38aaff;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9eb3c9;
+      border-top: 1px solid #174b78;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>DRONE INTEL</h1>
+    <p>UNDERSTAND. ANALYSE. INNOVATE.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>VIDEO LIBRARY</h2>
+      <p>Explore educational videos about military drone technology.</p>
+    </section>
+
+    <section class="video-grid">
+
+      <div class="video-card">
+        <h3>Drone Kamikazi</h3>
+
+        <iframe
+          src="https://www.youtube.com/embed/VXY1ZY8GxFg"
+          title="Drone Kamikazi"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+
+        <p>Educational video about military drone technology.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    © 2026 DRONE INTEL | Educational Military Technology
+  </footer>
+
+</body>
+</html>
